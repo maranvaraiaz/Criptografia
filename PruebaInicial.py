@@ -1,11 +1,12 @@
+import fileinput
+
+lines = []
 aux=0
-while (1):
-    a=input()
-    if (a!=''):
-        if (a.find('.')>=0):
-            aux+=float(a)
+for line in fileinput.input():
+    lines.append(line)
+    if (lines!=''):
+        if (line.find('.')>=0):
+            aux+=float(line)
         else:
-            aux+=int(a)
-    else:
-        print(aux)
-        break
+            aux+=int(line)
+    print(aux)
