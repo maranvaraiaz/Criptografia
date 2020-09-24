@@ -1,12 +1,12 @@
-import fileinput
-
-lines = []
+import sys
 aux=0
-for line in fileinput.input():
-    lines.append(line)
-    if (lines!=''):
-        if (line.find('.')>=0):
-            aux+=float(line)
+while (1):
+    a = sys.stdin.readline()
+    if (a!=''):
+        if (a.find('.')>=0):
+            aux+=float(a)
         else:
-            aux+=int(line)
-    print(aux)
+            aux+=int(a)
+    else:
+        print(aux)
+        break
